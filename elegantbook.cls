@@ -50,8 +50,8 @@
 \ifxetex
 	\RequirePackage{fontenc}
 	\RequirePackage[no-math]{fontspec}
-	\setmainfont{Times New Roman}[NFSSFamily=ntxtlf]
-	\setsansfont{Arial}
+	%\setmainfont{Garamond}[NFSSFamily=ntxtlf]
+	%\setsansfont{Arial}
 	%\setmonofont[Scale=0.9]{Courier New}
 	\RequirePackage{xeCJK}
 	\RequirePackage{xunicode}
@@ -258,14 +258,9 @@
 	bookmarksnumbered=true,
 	bookmarksopen=true,
 	pdfkeywords={ElegantBook},
-	colorlinks,
-	linkcolor=winered,
-	citecolor=winered,
-	urlcolor  = winered,
 	plainpages=false,
 	pdfstartview=FitH,
-	pdfborder={0 0 0},
-	linktocpage
+	pdfborder={0 0 0}
 }
 
 
@@ -276,13 +271,13 @@
 
 
 \titleformat{\chapter}[\style]{\bfseries}
-{\filcenter\LARGE\enspace\bfseries{\color{main}\IfAppendix{\appendixname}{\chaptername}\enspace}}{1pt}{\bfseries\color{main}\LARGE\filcenter}[\filcenter\base{main}{88}]
+{\filcenter\LARGE\enspace\bfseries{\color{main}\IfAppendix{\appendixname}{\chaptername}\enspace}}{1pt}{\bfseries\color{main}\LARGE\filcenter}[\filcenter]
 
 \titleformat{\section}[hang]{\bfseries}
-{\hspace{-2.45em}\Large\bfseries{\color{main}\thesection}\enspace}{1pt}{\color{main}\Large\bfseries\filright}
+{\Large\bfseries{\color{main}\thesection}\enspace}{1pt}{\color{main}\Large\bfseries\filright}
 
 \titleformat{\subsection}[hang]{\bfseries}
-{\hspace{-2.45em}\large\bfseries\color{main}\thesubsection\enspace}{1pt}{\color{main}\large\bfseries\filright}
+{\large\bfseries\color{main}\thesubsection\enspace}{1pt}{\color{main}\large\bfseries\filright}
 
 \titleformat{\subsubsection}[hang]{\bfseries}
 {\hspace{-2.45em}\large\bfseries\color{main}\thesubsection\enspace}{1pt}{\color{main}\large\bfseries\filright}
@@ -427,7 +422,6 @@
 \fancyhead[EL,OR]{\color{main}--\thepage/\pageref*{LastPage}--}
 \fancyhead[ER]{\color{main}\em\nouppercase\leftmark{}}
 \fancyhead[OL]{\color{main}\em\nouppercase\rightmark}
-\fancyfoot[c]{\base{main}{88}}
 \renewcommand{\headrule}{\color{main}\hrule width\textwidth}
 \pagestyle{fancy}
 
@@ -436,8 +430,6 @@
 \renewcommand{\chaptermark}[1]{\markboth{\chaptername \; #1\;}{}}
 
 %%封面
-\newcommand*{\equote}[1]{\def\@equote{#1}}
-
 \newcommand*{\logo}[1]{
  \def\@logo{\includegraphics[width=0.3\textwidth]{#1}
  }
@@ -480,7 +472,6 @@
 	\end{tikzpicture}
 	\end{minipage}
 	\vfill
-	\centerline{\itshape \@equote}
 	\vfill
 	\restoregeometry
 \end{titlepage}
