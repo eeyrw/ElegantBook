@@ -50,7 +50,7 @@
 \ifxetex
 	\RequirePackage{fontenc}
 	\RequirePackage[no-math]{fontspec}
-	%\setmainfont{Garamond}[NFSSFamily=ntxtlf]
+	%\setmainfont{Times New Roman}[NFSSFamily=ntxtlf]
 	%\setsansfont{Arial}
 	%\setmonofont[Scale=0.9]{Courier New}
 	\RequirePackage{xeCJK}
@@ -280,7 +280,7 @@
 {\large\bfseries\color{main}\thesubsection\enspace}{1pt}{\color{main}\large\bfseries\filright}
 
 \titleformat{\subsubsection}[hang]{\bfseries}
-{\hspace{-2.45em}\large\bfseries\color{main}\thesubsection\enspace}{1pt}{\color{main}\large\bfseries\filright}
+{\large\bfseries\color{main}\thesubsection\enspace}{1pt}{\color{main}\large\bfseries\filright}
 
 
 \titlespacing{\chapter}{0pt}{0pt}{1.5\baselineskip}
@@ -450,7 +450,6 @@
 	\setlength{\fboxsep}{0pt}
 	\colorbox{second}{\makebox[\linewidth][c]{\shortstack[c]{\vspace{0.5in}}}}
 	\vfill
-	\hfill
 	\hspace{2em}
 	\begin{minipage}[c]{0.68\linewidth}
 		{\bfseries\Huge \@title\\}
